@@ -4,7 +4,14 @@
 */
 
 function isPalindrome(str) {
+  let str1 = str.replace(/[\.,?!]/g, '').replace(/\s/g, '');
+  let word = '';
+  for(let i=str1.length-1; i>=0; i--) {
+    word = word + str1.charAt(i);
+  }
+  if(word.toUpperCase() == str1.toUpperCase())
   return true;
+  else return false;
 }
 
 module.exports = isPalindrome;
